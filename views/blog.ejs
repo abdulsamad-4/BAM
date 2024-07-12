@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Devotionals</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">BAM</div>
+            
+            <div class="nav-list">
+                <ul>
+                    <li><a href="/HTML/home.html">HOME</a></li>
+                    <li><a href="#">About Ben Musa</a></li>
+                    <li><a href="#">Sermon/Teaching</a></li>
+                    <div class="mini"><li><a href="#" class="ministries">Ministries</a></li>
+                        <div class="ministries-dropdown">
+                            <ul class="mini-ul">
+                                <a href=""><li>Mission</li></a>
+                                <a href=""><li>Youth fellowship</li></a>
+                                <a href=""><li>Women fellowship</li></a>
+                                <a href=""><li>Men fellowship</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+               
+
+            <button class="give">GIVE</button>
+            <div class="social">
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <button class="menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+    
+    <section class="title">
+        <h1>Daily Devotional</h1>
+        <p>Get inspired</p>
+    </section>
+
+    <main>
+        <div class="container splitscreen">
+
+          <% posts.forEach(post => { %>
+            <div class="post">
+
+              <div class="img"></div>
+
+              <div class="content">
+                <h6><%= post.title %></h6>
+
+                <small><%= post.date %></small>
+
+                <p><%= post.content %></p>
+
+                <button class="read-btn"><a href="read"<%= post.title %>>Read More</a></button>
+
+              </div>
+             
+            </div>
+          <% }); %>
+        </div>
+      </main>
+      
+    <footer>
+        <div class="foot" style="display: flex; width: 80%;">
+            <div class="name">
+                <h5 class="name-ben" style="color: aliceblue;">BENJAMIN AUDU</h5>
+                <div class="social2">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <a href="#" class="vist-church">Visit www.christhousechurch.com</a>
+            </div>
+
+            <div class="foot-items" style="color: aliceblue;">
+                <h5 class="foot-items-h">Check out</h5>
+                <ul class="foot-items-ul" style="list-style-type: none;">
+                    <a href=""><li><i class="fa-solid fa-book foot-items-list"></i> Books</li></a>
+                    <a href=""><li><i class="fa-solid fa-headphones foot-items-list"></i> Sermon</li></a>
+                    <a href=""><li><i class="fa-solid fa-video foot-items-list"></i> videos</li></a>
+                    <a href=""><li><i class="fa-solid fa-book-bible foot-items-list"></i> Devotional</li></a>
+                </ul>
+            </div>
+
+            <div class="foot-items" style="color: aliceblue;">
+                <h5 class="foot-items-h">Contact</h5>
+                <ul class="foot-items-ul" style="list-style-type: none;">
+                    <a href=""><li><i class="fa-solid fa-money-bill foot-items-list"></i> Give</li></a>
+                    <a href=""><li><i class="fa-regular fa-address-book foot-items-list"></i> Get in touch</li></a>
+                    <a href=""><li><i class="fa-solid fa-share-nodes foot-items-list"></i> Share your testimony</li></a>
+                </ul>
+            </div>
+        </div>
+        <div class="last">
+            <ul class="last">
+                <li><a href="">Home</a></li>
+                <li><a href="">Sermon</a></li>
+                <li><a href="">Ministries</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <p style="color: bisque;">© 2024 Benjamin Audu Musa. All rights reserved. </p>
+        </div>
+    </footer>
+
+    <script src="/JS/blogstyle.js"></script>
+</body>
+</html>
